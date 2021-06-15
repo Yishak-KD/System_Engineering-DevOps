@@ -1,2 +1,2 @@
 #!/bin/bash
-ls PATH | wc -1
+find PATH -type f | wc -1
