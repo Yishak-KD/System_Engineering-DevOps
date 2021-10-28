@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# while loop plus the if statement to print out
+
+i=0
+while [ $i -lt 10 ]
+do
+        echo "Best School"
+        ((i++))
+	if (( $i==9 ))
+	then
+		echo "Hi"
+        fi
+done
