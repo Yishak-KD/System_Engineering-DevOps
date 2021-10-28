@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# use the until looping method to print out
+
+a=0
+until [ ! $a -lt 10 ]
+do
+   echo "Best School"
+   a=`expr $a + 1`
+done
