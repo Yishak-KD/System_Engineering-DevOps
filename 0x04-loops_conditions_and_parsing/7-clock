@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# print an hour and minute
+
+hour=0
+declare i minute
+
+while ((hour < 13))
+do 
+   echo "Hour: $hour"
+   minute=1
+   while ((minute < 60))
+   do
+        echo "$minute"
+	((minute++))
+   done
+   ((hour++))
+done
