@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# SSH client configuration by refusing the password
+
+ssh-copy-id -i ~/.ssh/school 3.235.188.218
