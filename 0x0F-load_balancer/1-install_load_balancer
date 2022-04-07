@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Script to install HAproxy load balancer
+
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt install -y haproxy
