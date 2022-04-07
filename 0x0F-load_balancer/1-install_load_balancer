@@ -4,3 +4,15 @@
 sudo apt-get -y update
 sudo apt-get -y upgrade
 sudo apt install -y haproxy
+
+printf %s "
+frontend web-frontend
+	bind 3.236.121.113:80
+	mode http
+	default_backend web-backend
+
+backend web-backend
+	balance roundrobin
+	server 904-web-01 35.196.211.2:80 check
+	server 904-web-02 3.236.105.194:80 check
+" > /etc/haproxy/haproxy.cfg
