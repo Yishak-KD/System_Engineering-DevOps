@@ -57,3 +57,4 @@ backend app-main
     server 904-web-01 35.196.211.2:80 check
     server 904-web-02 3.236.105.194:80 check
 " > /etc/haproxy/haproxy.cfg
+sudo service haproxy start
