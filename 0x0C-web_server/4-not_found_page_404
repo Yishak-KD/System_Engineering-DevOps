@@ -18,7 +18,7 @@ printf %s "server {
 	}
 	
 	error_page 404 /error-page.html;
-        location = /error-page.html {
+        location /404 {
                 root /var/www/html;
                 internal;
         }
