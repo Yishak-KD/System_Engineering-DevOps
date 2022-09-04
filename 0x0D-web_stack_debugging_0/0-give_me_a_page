@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-# script that changes port 8080 to 80
-echo "ServerName localhost" >> /etc/apache2.conf
-service apache2 start
