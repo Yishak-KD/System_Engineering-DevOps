@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# A script that redirects
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo touch /var/www/html/index.html
+echo "Hello World!" > /var/www/html/index.html
+sudo printf %s "
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server;
+
+    root /var/www/html;
+
+    index index.html index.htm index.nginx-debian.html;
+
+    location /redirect_me {
+        rewrite ^/redirect_me(.*)$ https://www.youtube.com/watch?v=QH2-TGUlwu4 redirect;
+    }
+}" > sudo etc/nginx/sites-enabled/default
+sudo service nginx reload
