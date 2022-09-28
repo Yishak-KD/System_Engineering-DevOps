@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# Script to install HAproxy
+sudo apt update
+sudo apt install -y haproxy
+echo "
+   frontend http_front
+   bind *:80
+   stats uri /haproxy?stats
+   default_backend http_back
+
+backend http_back
+   balance roundrobin
+   server 904-web-01 44.197.251.255:80 check
+   server 904-web-02 3.238.230.78:80 check" | sudo tee /etc/haproxy/haproxy.cfg
+sudo service haproxy reload
