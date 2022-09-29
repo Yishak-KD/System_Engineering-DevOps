@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Fix connection refused issue with port 80
-sudo service nginx start
+sudo service nginx reload
