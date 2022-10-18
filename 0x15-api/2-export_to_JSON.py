@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """JSON file"""
+import json
 import requests
 import sys
-import json
 
 if __name__ == "__main__":
     user_id = sys.argv[1]
