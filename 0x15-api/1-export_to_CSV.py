@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """CSV file"""
+import csv
 import requests
 import sys
-import csv
 
 if __name__ == "__main__":
     user_id = sys.argv[1]
